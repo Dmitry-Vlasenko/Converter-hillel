@@ -34,13 +34,10 @@ public class Converter {
     }
 
     private static double calculation(double data, int operation) {
-        switch (operation) {
-            case 1:
-                return data * 1.609344;
-            case 2:
-                return data / 1.609344;
-            default:
-                throw new IllegalArgumentException("Incorrect operation");
-        }
+        return switch (operation) {
+            case 1 -> data * 1.609344;
+            case 2 -> data / 1.609344;
+            default -> throw new IllegalArgumentException("Incorrect operation");
+        };
     }
 }
