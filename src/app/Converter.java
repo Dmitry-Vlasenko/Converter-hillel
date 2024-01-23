@@ -31,7 +31,7 @@ public class Converter {
             case 1:
                 return data * 1.609344;
             default:
-                throw new IllegalArgumentException("Invalid operator.");
+                throw new IllegalArgumentException("Incorrect operation");
         }
     }
 }
