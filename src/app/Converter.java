@@ -4,13 +4,14 @@ import java.util.Scanner;
 
 public class Converter {
     public static void main(String[] args){
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Select an operation");
-        System.out.println("1) Converting miles to kilometers");
-        System.out.println("2) Converting kilometers to miles");
-        System.out.println("3) Exit converter");
+        init();
+    }
 
-        while(true){
+    private static void init() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Select an operation \n 1) Converting miles to kilometers \n 2) Converting kilometers to miles \n 3) Exit converter");
+
+        while (true) {
             Integer operation = scanner.nextInt();
             if (operation.equals(3)) {
                 System.out.println("Exiting converter. Goodbye!");
@@ -40,4 +41,5 @@ public class Converter {
             default -> throw new IllegalArgumentException("Incorrect operation");
         };
     }
+
 }
